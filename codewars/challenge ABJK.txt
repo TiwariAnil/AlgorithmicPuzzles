@@ -1,0 +1,136 @@
+crazycoders A
+1000000 2000000 2000000
+500001500001
+Wrong Answer
+
+mdn A
+1000000 2000000 2000000
+Wrong Answer
+----------------------------------------------
+
+The Caped Crusaders B
+TIME CHALLENGE
+Our soln is faster than theirs due to two reasons:
+1: they are not caching the primes, every time they are adding sqrt(n) complexity for each group;
+2:  Their find method is not that much optimised, 
+	they are not considering the main node of the tree as the
+	parent of the group tree
+	
+We are considering it
+OUR:	if (parent[v] != v)
+        return parent[v] = findset(parent[v]);
+Theirs:	if(B[x]==x) return x;
+			return find(B[x]);
+			
+
+			
+Dotcpp B			
+1
+7 5 3
+3
+1
+1
+1
+1
+8
+1
+1 2
+2 3
+4 5
+3 4
+1 7
+Wrong ans
+
+mdn B			
+1
+7 5 3
+3
+1
+1
+1
+1
+8
+1
+1 2
+2 3
+4 5
+3 4
+1 7
+Wrong ans
+
+__________________________________
+
+jan C
+(not taking input) i.e wrong ans
+6 6
+1 2
+2 3
+3 4
+4 5
+3 6
+5 6
+Wrong ans
+
+dotcpp C
+TIME CHALLENGE
+they have used some algo, in which for some case 
+they will going mxn
+Brute forcely checking for all nodes
+		""""""""
+				for(j=0; j<n; j++)
+                    {
+                        if(index[j]==index[y[i]])
+                        index[j]=index[y[i]];
+                    }
+		""""""""
+this code is inside the input loop, ie 0 to m
+
+And we are not doing that, coz we are using parent child method which mlogn at most 
+
+segfault C
+TIME CHALLENGE
+they have used some algo, in which for some case 
+they will going mxn
+Brute forcely checking for all nodes
+		""""""""
+				for(j=0; j<n; j++)
+                    {
+                        if(index[j]==index[y[i]])
+                        index[j]=index[y[i]];
+                    }
+		""""""""
+this code is inside the input loop, ie 0 to m
+
+And we are not doing that, coz we are using parent child method which mlogn at most 
+
+
+____________________________
+
+carzycoders D
+wrong ans (segment fault)
+1
+1000000
+
+
+The Caped Crusaders D
+wrong ans
+1
+1000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

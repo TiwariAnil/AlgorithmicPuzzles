@@ -1,0 +1,276 @@
+
+Good Array Questions:
+http://www.careercup.com/question?id=5705699820568576
+http://www.careercup.com/question?id=5812734516002816
+http://www.careercup.com/question?id=15487859
+
+/*
+ helper function -- given two list nodes, join them
+ together so the second immediately follow the first.
+ Sets the .next of the first and the .previous of the second.
+*/
+static void join(Node a, Node b) {
+    a->large = b;
+    b->small = a;
+}
+
+
+/*
+ helper function -- given two circular doubly linked
+ lists, append them and return the new list.
+*/
+static Node append(Node a, Node b) {
+    Node aLast, bLast;
+    
+    if (a==NULL) return(b);
+    if (b==NULL) return(a);
+    
+    aLast = a->small;
+    bLast = b->small;
+    
+    join(aLast, b);
+    join(bLast, a);
+    
+    return(a);
+}
+
+
+/*
+ --Recursion--
+ Given an ordered binary tree, recursively change it into
+ a circular doubly linked list which is returned.
+*/
+static Node treeToList(Node root) 
+{
+    Node aList, bList;
+    
+    if (root==NULL) return(NULL);
+
+    /* recursively solve subtrees -- leap of faith! */
+    aList = treeToList(root->small);
+    bList = treeToList(root->large);
+    
+    /* Make a length-1 list ouf of the root */
+    root->small = root;
+    root->large = root;
+
+    /* Append everything together in sorted order */
+    aList = append(aList, root);
+    aList = append(aList, bList);
+    
+    return(aList);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ To find if there is any root to leaf path with specified sum in a binary tree
+ 
+  Given a linked list containing character in each node, segregate its nodes in such a way that all nodes 
+  containing a vowel are moved to the end of the linked list. We will have to maintain the order.
+  
+   Parenthesis checker.
+   
+   Given a linked list, sort without extra space.
+   
+   Methods to serialize & deserialize a tree ,must complete the below 2 monthods. File serialize (node *root) & node * deserialize(File f)
+   
+   
+   Q1: Calculate the expression (2+3)*5 .. The question just said this .. I guess we had to make our own assumptions to solve the problem
+
+Q2: Two trees can be called isomorphic if they have similar structure and the only difference amongst them can be is, that their child nodes may or may not be swaped..
+
+for example
+
+——4
+
+—-2—6
+
+–1–3–5–7
+
+and
+
+——4
+
+—-6—2
+
+–1–3–7–5
+
+are isomorphic .. the trees are similar and a few nodes have their left and right child swapped…
+
+Given two trees determine if they are isomorphic…
+
+The interviewstreet people marked the solution to my first question wrong even when it worked fine.. When I told the HR about the situation, she got it checked with some of the amazon guys and they were ok with it.
+
+I cleared the written test.
+
+
+Find k-th smallest element in BST (Order Statistics in BST)
+
+Dynamic Programming | Set 3 (Longest Increasing Subsequence)
+
+
+
+Online Programming Round: (5 methods, 2 hours)
+
+1)     A sentence is given which contains lowercase English letters and spaces. It may contain multiple spaces. Get first letter of every word and return the result as a string. The result should not contain any space. Complete the following method:
+
+static String getFirstLetterWord(String text) {  }
+
+2)     Given an array. Iterate it for the given number of times. And then return the summation of the resultant elements.
+
+Ex: Array is { 1,2,5,6}, N=2
+
+After 1st iteration: {2-1, 5-2, 6-5}={1,3,1}
+
+After 2nd : {3-1, 1-3}={2,-2}
+
+Sum is 2  + (-2) = 0
+
+If only one element remains in the array, the element remains the same after applying the iteration. Complete the method.
+
+static int iterateSequence(Vector<Integer> a, int N) { }
+
+3)     Find Nth largest element in the BST. Complete the method.
+
+staticintnLargeBST(Node root, int N) {}
+
+Given that
+
+class Node
+{
+    Node left, right;
+    int data;
+    Node(intnewData)
+    {
+        left = right = null;
+        data = newData;
+    }
+}
+4)     Swap adjacent nodes in the linked list. Change the links, not the data. Complete the method.
+
+Ex:1, 2, 3, 4
+
+o/P: 2, 1, 4, 3
+
+ex: 1,2,3,4,5
+
+op: 2, 1, 4, 3, 5
+
+class Node {
+  Node next;
+  int val;
+}
+
+static Node swapAdjacentNodes(Node head) {} 
+5)     Find length of the Longest-Increasing-Subsequence.
+
+e.g.1.
+i/p: 1, 2, 3
+o/p: 3
+explanation: the sequence is increasing
+
+e.g.2
+i/p: 4,5,6,7,8,1,2,1,2,3,5,4,6,7,8,9,0,6,7
+o/p: 8
+xp: 1,2,3,4,6,7,8,9
+
+e.g.3
+i/p: 1,2,9,4,5,10,7,8
+o/p: 6
+xp: 1,2,4,5,7,8
+
+e.g.4
+i/p: 20, 3,22, 5,50, 34, 49, 91,110
+o/p:6
+xp: 20,22,34,49,91,110
+OR
+3,5,34,49,91,110
+
+Complete the method.
+
+static int lengthLIS(Vector<Integer> sequence) {}
+
+--
+
+http://www.codeproject.com/Articles/15589/Understanding-Operator-new-and-Operator-delete
+
+
+https://www.youtube.com/watch?v=UOV49oGr2pc
+dominiquebritton2011@hotmail.com
+
+=============================================Amazon Interview Doubts========================================
+=============================================MS Interview Doubts============================================
+1. Given an unsorted array, how to divide them into two equal arrays whose difference of sum is minimum
+2.Given a string, you have remove duplicates from it in O(n) time and O(1) space.
+3. mapping nd hashing.
+4.  Traverse a binary tree in a Zig-Zag order. (Book Narshimaa).
+5. Print the last ten lines. If number of lines is less than 10 then print all lines.
+6.  find consecutive elements in array that have sum equals to zero.
+7. How will I keep track of number of visitors visited my web page?
+8.Given a string. Find a character with most number of occurrences. O(n) and in space, without using hashing..
+9.We have a ‘n’ steps and a ball which take either 1 step at a time or 2 steps at a time. Find out the number of possible ways it covers exactly ‘n’ steps. (Complexity !! )
+10. one's and two's complement, its necessary !
+
+
+1. WAP to print last 10 lines of given string. If string has less than 10 lines then print whole string, lines are separated by ‘\n’ . [Ans. There are two app. (i) Top to down (ii) Bottom to up ( this is efficient ) ]
+2.5. Convert Singly and Doubly sorted linked list to BST and optimize it.
+ (Chotu's book :D )
+3. Trie !
+4. Suppose you are going to organize a party from 9:00 am to 20:00 pm. You have invited ‘n’ number of guests for the party. You are given the arrival time and the departure time of all guests. Every time a new guest arrives, you give him a glass of wine and when he leaves, you take the glass back. If someone has left and returned the glass, you can give the same glass to a new guest who has just arrived.
+Based on the given schedule for guests, determine the minimum number of glasses required for the party. A guest can come or leave at any time, but you are given the fixed schedule. Write code for the given problem.
+
+
+0.  How can we do a Tree Traversal without using a stack (not even the stack for recursion). Write code for an in-order traversal without using stack. What would be the changes in the function if we want to do a pre-order or post-order traversal?
+1. how is the complexity of BFS is O(V+E). 
+2. Print paths also for a Graph between two points (DFS or BFS or Both)
+3. Diff between List and Vector ;) in C++.
+4. Reverse using 3 pointers and 2 pointers.
+5. least common ancestor of two given nodes in a binary tree. ( both recursive and iterative approach).
+http://leetcode.com/2011/07/lowest-common-ancestor-of-a-binary-tree-part-ii.html
+6. Which data-structure you will use for implementing the ‘malloc’ and ‘free’ functions? (You have been given with a pointer which points to a large chunk of memory).Write full codes for implementing these two functions.
+7. Implement T9 dictionary. how T9 works is : let say if I press 223 it should give all the possible valid words in suggestion 
+
+1.Two numbers are stored in link list, need to add those two number.I was also asked to write the test case which breaks the code.
+2.How does the telephone directory search of nokia phone works. If i give a name it should get me the contact number and vice versa.
+3.Given an array which contains a number in majority (i.e. A number occurs more than 50% times in the array) need to find it.
+4.Given an array of size n, having numbers from 1..n , with one number missing and one occurring twice. Find the 2 numbers
+5.Code to remove alternate duplicate characters from given string.
+
+============================================================================================================
+1) You have given a number N, print all balanced parenthesis expression which 
+can be generate using N pairs of open and close braces. 
+For ex. for N=3, ((())),()()(),()(()),(())()
+First i gave him a brute force solution(generate all possible combination and check for valid expression),then he ask me for optimized code and I was able to do it after little mess-up.also ask for complexity of my code.
+
+1) A number is given say n, 
+find the minimum number which is greater than n and has same no. of set bits in it.
+
+Resize() malloc()
+string multipication()
+
+g++ -save-temps code.cpp
+-> to get .o, .i , .s ie object, preprocessed, assembly files respectively :D
+
+1. How to get log() in C++; 	eg: log(1024, 2)= 10; something ;)
+
+Quora: What is most useful shortcut key on browser !	
+	
+Hexa decimal, convert it into binary or decimal
+
+Implement Linked list by scratch :D, then sucking questions.
+
+Implement Merge sort (get the feel of inversion :* ),
+Quick sort,
+
+Start Reading Interviews too ! on geekforgeeks
+
+segment tree implement

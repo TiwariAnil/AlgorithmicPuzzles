@@ -1,0 +1,56 @@
+1.
+http://en.wikipedia.org/wiki/Dangling_pointer
+In many languages (e.g., the C programming language) deleting an object from memory explicitly or by destroying the stack frame on return does not alter associated pointers. The pointer still points to the same location in memory even though the reference has since been deleted and may now be used for other purposes.
+A straightforward example is shown below:
+{
+   char *dp = NULL;
+   /* ... */
+   {
+       char c;
+       dp = &c;
+   } /* c falls out of scope */
+     /* dp is now a dangling pointer */
+}
+If the operating system is able to detect run-time references to null pointers, a solution to the above is to assign 0 (null) to dp immediately before the inner block is exited. Another solution would be to somehow guarantee dp is not used again without further initialization.
+Another frequent source of dangling pointers is a jumbled combination of malloc() and free() library calls: a pointer becomes dangling when the block of memory it points to is freed. As with the previous example one way to avoid this is to make sure to reset the pointer to null after freeing its reference—as demonstrated below.
+
+#include <stdlib.h>
+  
+void func()
+{
+    char *dp = malloc(A_CONST);
+    /* ... */
+    free(dp);         /* dp now becomes a dangling pointer */
+    dp = NULL;        /* dp is no longer dangling */
+    /* ... */
+}
+An all too common misstep is returning addresses of a stack-allocated local variable: once a called function returns, the space for these variables gets deallocated and technically they have "garbage values".
+
+
+
+
+
+
+2.
+The concept of structure and union are same. Both are created to collect different data type in one variable. The only difference is in memory management i.e. Memory requirement of the two. If we declared a structure with 1 char and two int variable then it we use 5byte of RAM while we execute program. If we declare struct1, struct2 of the above structure type then both structures will acquire 5 byte each i.e. Total 10 bytes will be used of RAM. On the other hand if we declare union with 1char and 2 int variable and declare to instance uni1 and uni2 then they will acquire only 5 bytes. If we access uni1 first then data we entered will be stored at uni1's variable and if we again enter value of variables for uni2 then these will be overwriten of the uni1 variables. 
+Advantage of union over structure : - 
+Less RAM space is required thus fast execution of program. 
+DisAdvantage of Union over structure : - 
+If we use 2 or more instance of single onion the data will be lost after data for second instance is entered. 
+I think the concept of union and structure is clear to you. 
+struct foo 
+{ 
+char c; 
+long l; 
+char *p; 
+}; 
+
+union bar 
+{ 
+char c; 
+long l; 
+char *p; 
+}; 
+
+
+3.

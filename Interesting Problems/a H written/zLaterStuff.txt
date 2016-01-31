@@ -1,0 +1,12 @@
+
+Lets play a game, okay, did you saw a man running for all the non-gays guys and hitting
+
+I went to some public place, they asked me count things, I said, zero, one 
+and it was the end. ;) , programmers start with zero :D
+
+
+A problem: 
+We send/ exchange key from TCP and then we make this TCP encrypted with 
+those keys only, cant we do it in better way
+we first exchange some key, make system secure, and then we exchange another 
+key to make it another way strong. ?? What the fuck Idea, it is. 

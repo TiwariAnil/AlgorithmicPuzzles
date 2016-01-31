@@ -1,0 +1,62 @@
+Re Coding Kata.
+
+file input output
+
+http://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/#comment-19752
+
+mergesort linked list
+
+
+JUST Write it
+Median in a stream of integers (running integers)
+Median in a stream of integers (running integers)
+Median in a stream of integers (running integers)
+Median in a stream of integers (running integers)
+
+
+Write a program to find longest repeating substring In a given 
+string running code were required covering all base cases.
+
+Few question related to OS what is deadlock, Race-condition, Semaphore and many more, 
+few question Related to 
+DBMS what is Normalization define all 
+normal forms(I directly told him I don’t remember I read it in 5th semester )
+
+convert a decimal number into binary your code should work
+ on both big endian and small endian machine.
+
+
+1. IMPORTANT Next higher number with same number of set bits - GeeksforGeeks   GeeksforGeeks
+2. Largest Binary Search Tree (BST) in a Binary Tree  LeetCode
+3. Construct Tree from given Inorder and Preorder traversals
+4. IMPORTANT Lowest Common Ancestor in a Binary Search Tree.
+
+Lowest Common Ancestor in a Binary Tree | Set 1
+	Find distance between two given keys of a Binary Tree
+ 
+IMPORTANT Print ancestors of a given binary tree node without recursion -
+
+
+bst TO DLL
+
+
+IMPORTANT Construct Full Binary Tree from given preorder and postorder traversals
+
+Iterative Postorder Traversal  
+
+Children sum property (increment)
+
+Largest binary search subtree !
+
+--------------------------------------------------------------------------------
+Add 1 to a given number
+
+Next higher number with same number of set bits
+
+Very important
+	Median of two sorted arrays
+
+
+
+
+

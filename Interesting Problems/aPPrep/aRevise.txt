@@ -1,0 +1,5 @@
+1. Construction of Longest Monotonically Increasing Subsequence (N log N)
+2. Dynamic Programming _ Set 3 (Longest Increasing Subsequence) - GeeksforGeeks
+3. Dynamic Programming | Set 7 (Coin Change)
+4. Dynamic Programming | Set 8 (Matrix Chain Multiplication)
+5. 

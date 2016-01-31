@@ -1,0 +1,40 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+/*
+class PrefixCode
+{
+     public:
+	 string isOne(vector <string> words)
+	 {
+		int heighit, width, i ,j;
+		string temp;
+		height=words.size();
+		if(height!=0)		
+		{
+		     //width=words[0].length();
+			 for(i=0;i<height-1;i++)
+			    temp=words.pop_back();
+				for(   )
+				      if(temp.find(words[0]:))
+		
+		}
+	 
+	 
+	 }
+};
+
+*/
+int main()
+{
+  //  PrefixCode test;
+      vector <string> str;
+	  str.push_back("anil0");
+	  str.push_back("anil1");
+	  str.push_back("anil2");
+	  str.push_back("anil3");
+	  str.push_back("anil4");
+		cout<<str[0];
+		return 0;
+}

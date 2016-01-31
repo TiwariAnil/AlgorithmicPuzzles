@@ -1,0 +1,93 @@
+
+81. osi layer
+82. Design Restaurant reservation system. "Do some careercup designe questions"
+	[http://www.careercup.com/page?pid=amazon-interview-questions&job=software-engineer-developer-interview-questions&topic=object-oriented-design-interview-questions]
+83. What is a process and thread? Differences?
+	[What is a thread safe code? Explain]
+
+
+
+86. Fundes:
+a): Diameter of tree ! 						#both uses same property of finding height while recursing !
+b): Check if height balanced ! 				#both uses same property of finding height while recursing !
+
+
+87. Max no of knights can be placed on nxn chess board.
+Ans: ceil(n*n/2) i.e all white cells / black cells
+
+88. Reservoir Sampling approach
+
+89.What is an interface? Why it is used? Give an example. 
+What is an abstract class? Why it is used? Give example. Why 2 different concepts of interface and abstract class?
+
+90.  Do you know about singleton class? What is it? 
+Implement a simple singleton class. I made some mistakes in making attributes static etc. He guided me and finally I corrected all bugs.
+
+91. What is priority queue? and what about 3 way of implementation , sorted , unsorted and binary tree??
+92. Direct implement from stl lib??
+
+93. If vectors are copied as whole new ?
+map , set, vector , multiset ===   complexity, storage+time ; everyother thing!
+
+94. typedef vs #define
+The #define is a C-directive which is also used to define the aliases 
+for various data types similar to typedef but with three differences:
+
+The typedef is limited to giving symbolic names to "types" only where as 
+#define can be used to define alias for values as well, like you can define 1 as ONE etc.
+
+The typedef interpretation is performed by the compiler where as #define
+ statements are processed by the pre-processor.
+
+95. ===============COMPLETE | STRICT | FULL > BINARY TREE=================================================================
+
+COMPLETE B.T = Every level except last should be filled completely
+Is a binary tree in which every level, except possibly the last,
+is completely filled, and all nodes are as far left as possible.
+it seems to mean a balanced tree.
+
+       x        COMPLETE (except last level, above every node is filled)
+     /   \
+    /     \
+   x       x
+  / \     / \
+ x   x   x   x
+/ \ /
+x x x
+
+FULL B.T ------ All nodes other than leaves have must 2 children.
+(sometimes proper binary tree or 2-tree or strictly binary tree)
+is a tree in which every node other than the leaves has two children.
+so you have no leaves with only 1 child. Appears to be the same as strict binary tree.
+
+       x        FULL (ever node has 2 children)
+     /   \
+    /     \
+   x       x
+  / \ 
+ x   x 
+    / \
+    x x 
+
+
+
+96. ================LONGEST PATH IN ANY TREE================================================================
+There is this standard algorithm for finding longest path in undirected
+trees using two depth-first searches:
+
+1: Start DFS from a random vertex v and find the farthest vertex from it; 
+   say it is v'.
+2: Now start a DFS from v' to find the vertex farthest from it. 
+   This path is the longest path in the graph.
+Link: http://cs.stackexchange.com/questions/11263/longest-path-in-an-undirected-tree-with-only-one-traversal
+
+97. ================ORDER OF BFS AND DFS===============================================================
+Analysis of BFS O(V+E)(see the image , or cormem page 597)
+My Conclusion: Since we get each vertex once, as visit[] is false initially and 
+we do it visit[i]=true once we visit any vertex. So, each vertex one time. Plus to
+get on other vertex, we check each edge connected to the vertex that we reached.
+So, we cover every edge "at least" once. Hence O(V+E).
+
+Similarly, DFS also.
+
+98. 
